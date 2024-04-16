@@ -1,21 +1,17 @@
-function play(note: Note) {
-    music.playTone(note, music.beat(BeatFraction.Whole));
-}
-
-function playC() {
-    play(Note.C);
-}
-function playE() {
-    play(Note.E);
-}
-
-
-
 basic.forever(function () {
-    if (input.buttonIsPressed(Button.A)) {
-        playC();
-    }
-    if (input.buttonIsPressed(Button.B)) {
-        playE();
-    }
+    music.playTone(Note.E, music.beat(BeatFraction.Quarter))
+    music.playTone(Note.E, music.beat(BeatFraction.Quarter))
+    music.playTone(0, music.beat(BeatFraction.Quarter))
+    music.playTone(Note.E, music.beat(BeatFraction.Quarter))
+
+    music.playTone(0, music.beat(BeatFraction.Quarter))
+    music.playTone(Note.C, music.beat(BeatFraction.Quarter))
+    music.playTone(Note.E, music.beat(BeatFraction.Half))
+
+    music.playTone(Note.G, music.beat(BeatFraction.Half))
+    music.playTone(0, music.beat(BeatFraction.Half))
+
+    music.playTone(Note.C, music.beat(BeatFraction.Half))
+
+    music.playTone(0, music.beat(BeatFraction.Whole))
 })
