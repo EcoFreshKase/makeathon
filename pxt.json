@@ -3,12 +3,14 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "v2": "*"
+        "v1": "*"
     },
     "files": [
         "main.blocks",
         "main.ts",
-        "README.md"
+        "README.md",
+        "note.ts",
+        "musicPlayer.ts"
     ],
     "testFiles": [
         "test.ts"
