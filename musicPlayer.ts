@@ -24,4 +24,10 @@ class MusicPlayer {
     playPause() {
         music.playTone(0, music.beat(BeatFraction.Whole));
     }
+
+    setNotes(notes: PlayableNote[]) {
+        this.notes = notes;
+        this.curNoteIndex = 0;
+    }
+
 }
