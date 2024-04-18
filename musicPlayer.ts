@@ -1,6 +1,6 @@
 class MusicPlayer {
-    curNoteIndex: number;
-    notes: PlayableNote[];
+    private curNoteIndex: number;
+    private notes: PlayableNote[];
 
     constructor(notes: PlayableNote[]) {
         this.curNoteIndex = 0;
@@ -15,6 +15,10 @@ class MusicPlayer {
 
         music.playTone(note.frequency, note.time);
         this.curNoteIndex = (this.curNoteIndex + 1) % this.notes.length;
+    }
+
+    playNote(frequency: NoteOptional, beat: BeatFraction) {
+        music.playTone(frequency, music.beat(beat));
     }
 
     playPause() {

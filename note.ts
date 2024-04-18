@@ -4,8 +4,10 @@ enum emptyNote {
     Pause = 0
 }
 
+type NoteOptional = emptyNote | Note;
+
 interface PlayableNote {
-    frequency: emptyNote | Note;
+    frequency: NoteOptional;
     time: number;
 }
 
