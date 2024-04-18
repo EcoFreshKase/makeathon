@@ -3,5 +3,5 @@
 // let musicPlayer: MusicPlayer = new MusicPlayer(notes)
 
 // basic.forever(function () {
-//     musicPlayer.play();
+//     MusicPlayer.playNote(QuarterC.frequency, BeatFraction.Whole);
 // })
