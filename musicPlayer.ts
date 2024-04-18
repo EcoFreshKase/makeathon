@@ -17,7 +17,7 @@ class MusicPlayer {
         this.curNoteIndex = (this.curNoteIndex + 1) % this.notes.length;
     }
 
-    playNote(frequency: NoteOptional, beat: BeatFraction) {
+    static playNote(frequency: NoteOptional, beat: BeatFraction) {
         music.playTone(frequency, music.beat(beat));
     }
 
