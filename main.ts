@@ -1,7 +1,3 @@
-// const notes = [QuarterE, QuarterE, QuarterPause, QuarterE, QuarterPause, QuarterC, HalfE, HalfG, HalfPause, HalfC]
-
-// let musicPlayer: MusicPlayer = new MusicPlayer(notes)
-
-// basic.forever(function () {
-//     MusicPlayer.playNote(QuarterC.frequency, BeatFraction.Whole);
-// })
+ basic.forever(function () {
+     Musikspieler.spieleNote(ViertelC.frequenz, BeatFraction.Whole);
+ })

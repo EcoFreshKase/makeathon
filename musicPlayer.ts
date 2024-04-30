@@ -1,33 +1,34 @@
-class MusicPlayer {
-    private curNoteIndex: number;
-    private notes: PlayableNote[];
+class Musikspieler {
+    private aktuellerNotenIndex: number;
+    private noten: SpielbareNote[];
 
-    constructor(notes: PlayableNote[]) {
-        this.curNoteIndex = 0;
-        this.notes = notes;
+    constructor(noten: SpielbareNote[]) {
+        this.aktuellerNotenIndex = 0;
+        this.noten = noten;
     }
 
-    play() {
-        if (this.curNoteIndex === 0) {
-            this.playPause();
+    spiele() {
+        if (this.aktuellerNotenIndex === 0) {
+            this.spielePause();
         }
-        let note = this.notes[this.curNoteIndex];
+        let note = this.noten[this.aktuellerNotenIndex];
 
-        music.playTone(note.frequency, note.time);
-        this.curNoteIndex = (this.curNoteIndex + 1) % this.notes.length;
+        music.playTone(note.frequenz, note.zeit);
+        this.aktuellerNotenIndex = (this.aktuellerNotenIndex + 1) % this.noten.length;
     }
 
-    static playNote(frequency: NoteOptional, beat: BeatFraction) {
-        music.playTone(frequency, music.beat(beat));
+    static spieleNote(frequenz: NoteOptional, schlag: BeatFraction) {
+        music.playTone(frequenz, music.beat(schlag));
     }
 
-    playPause() {
+    spielePause() {
         music.playTone(0, music.beat(BeatFraction.Whole));
     }
 
-    setNotes(notes: PlayableNote[]) {
-        this.notes = notes;
-        this.curNoteIndex = 0;
+    setzeNoten(noten: SpielbareNote[]) {
+        this.noten = noten;
+        this.aktuellerNotenIndex = 0;
     }
 
 }
+
