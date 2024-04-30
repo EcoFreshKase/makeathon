@@ -1,3 +1,3 @@
  basic.forever(function () {
-     Musikspieler.spieleNote(ViertelC.frequenz, BeatFraction.Whole);
+     Musikspieler.spieleNote(viertelc.frequenz, BeatFraction.Whole);
  })
