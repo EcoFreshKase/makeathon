@@ -1,3 +1,8 @@
+interface SpielbareNote {
+    frequenz: number;
+    laenge: number;
+}
+
 class Musikspieler {
     private aktuellernotenindex: number;
     private noten: SpielbareNote[];
@@ -13,12 +18,8 @@ class Musikspieler {
         }
         let note = this.noten[this.aktuellernotenindex];
 
-        music.playTone(note.frequenz, note.zeit);
+        music.playTone(note.frequenz, note.laenge);
         this.aktuellernotenindex = (this.aktuellernotenindex + 1) % this.noten.length;
-    }
-
-    static spieleNote(frequenz: NoteOptional, schlag: BeatFraction) {
-        music.playTone(frequenz, music.beat(schlag));
     }
 
     spielepause() {
@@ -30,5 +31,9 @@ class Musikspieler {
         this.aktuellernotenindex = 0;
     }
 
+}
+
+function spielenote(frequenz: number, laenge: number) {
+    music.playTone(frequenz, music.beat(laenge));
 }
 
