@@ -1,3 +1,4 @@
+/* Beispiel
 basic.forever(function () {
     spielenote(fis, 1);
     spielenote(fis, 1);
@@ -30,3 +31,4 @@ basic.forever(function () {
     spielenote(d, 2);
     spielenote(d, 1);
 })
+*/
